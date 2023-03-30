@@ -1,3 +1,5 @@
+package problemSolving;
+
 import java.util.Arrays;
 
 public class LongestCommonPrefix {

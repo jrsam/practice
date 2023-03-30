@@ -1,3 +1,5 @@
+package problemSolving;
+
 public class Palindrome {
 
        static public boolean isPalindrome(String s) {

@@ -1,3 +1,5 @@
+package problemSolving;
+
 public class PerfectSubstring {
 
     static int MAX_CHAR = 26;

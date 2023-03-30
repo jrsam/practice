@@ -1,3 +1,7 @@
+package problemSolving;
+
+import java.util.Arrays;
+
 public class BubbleSort {
     static int[] a = {4, 2, 3, 5, 1};
 

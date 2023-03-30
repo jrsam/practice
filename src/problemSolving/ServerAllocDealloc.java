@@ -1,3 +1,5 @@
+package problemSolving;
+
 import java.util.*;
 
 public class ServerAllocDealloc {

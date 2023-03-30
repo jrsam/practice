@@ -1,10 +1,6 @@
 package javaFeatures;
 
-
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.LinkedBlockingDeque;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.stream.IntStream;
 
 class PasswordHash implements Runnable {
@@ -21,13 +17,15 @@ class PasswordHash implements Runnable {
 }
 
 public class ConcurrentPasswordHashing {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
         ExecutorService executorService = new ThreadPoolExecutor(10,10,0L, TimeUnit.MILLISECONDS, new LinkedBlockingDeque<>());
 
         String[] password = {"passowrd1", "passowrd2", "passowrd3", "passowrd4"};
-        int[] input = IntStream.range(0, 5000).toArray();
+        int[] input = IntStream.range(0, 100).toArray();
         for(int value: input) {
-            executorService.submit(new PasswordHash(String.valueOf(value)));
+            Future result = executorService.submit(new PasswordHash(String.valueOf(value)));
+            System.out.println(result.get());
         }
+        executorService.shutdown();
     }
 }

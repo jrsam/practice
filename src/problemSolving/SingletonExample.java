@@ -1,3 +1,5 @@
+package problemSolving;
+
 public class SingletonExample {
 
     private SingletonExample() {

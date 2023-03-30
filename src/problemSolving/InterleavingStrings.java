@@ -1,3 +1,5 @@
+package problemSolving;
+
 public class InterleavingStrings {
     public static void main(String[] args) {
         System.out.println(isInterleave("aabcc", "dbbca", "aadbbcbcac"));//true

@@ -1,3 +1,5 @@
+package problemSolving;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
